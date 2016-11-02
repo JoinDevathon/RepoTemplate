@@ -3,6 +3,7 @@
 if [ ! -d "server" ] || [ ! -d "build" ]; then
     echo "Spigot is not downloaded, downloading and building now.."
     bash download-spigot.sh
+    chmod +x ./build/apache-maven-3.2.5/bin/mvn # for some reason this isn't executable by default..
     mkdir -p server/plugins
 fi
 
@@ -25,7 +26,7 @@ if [[ ! $(uname) == MING* ]]; then
 fi
 
 while true; do
-    mvn clean install
+    ./build/apache-maven-3.2.5/bin/mvn clean install # use the maven that spigot build tools downloaded
     cp target/DevathonProject-1.0-SNAPSHOT.jar server/plugins/DevathonProject-1.0-SNAPSHOT.jar
     cd server
 
