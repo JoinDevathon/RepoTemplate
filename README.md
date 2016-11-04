@@ -28,8 +28,6 @@ Finish by November 6th at 8AM Central Time. You can find this time in your local
 
 ## Get Started
 
-### Don't understand the following steps?
-
 Don't worry, we made a video! Check it out at https://www.youtube.com/watch?v=u5HXS0l-VwQ
 
 ---
