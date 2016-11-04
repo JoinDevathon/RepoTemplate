@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d "server" ] || [ ! -d "build" ]; then
+if [ ! -d "build" ]; then
     echo "Spigot is not downloaded, downloading and building now.."
     rm -rf build/
     mkdir build
@@ -19,6 +19,9 @@ if [ ! -d "server" ] || [ ! -d "build" ]; then
     cd ..
 
     chmod +x ./build/apache-maven-3.2.5/bin/mvn # for some reason this isn't executable by default..
+fi
+
+if [ ! -d "server/plugins" ]; then
     mkdir -p server/plugins
 fi
 
