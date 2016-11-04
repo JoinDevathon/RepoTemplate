@@ -10,12 +10,14 @@ if [ ! -d "server" ] || [ ! -d "build" ]; then
     java -jar BuildTools.jar --rev 1.10
 
     if [ ! -d "apache-maven-3.2.5" ]; then
+        echo "Maven is not downloaded, downloading now.."
         curl -o apache-maven-3.2.5.zip http://mirror.metrocast.net/apache//maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip
         unzip apache-maven-3.2.5.zip
         rm apache-maven-3.2.5.zip
     fi
 
     cd ..
+
     chmod +x ./build/apache-maven-3.2.5/bin/mvn # for some reason this isn't executable by default..
     mkdir -p server/plugins
 fi
@@ -39,7 +41,11 @@ if [[ ! $(uname) == MING* ]]; then
 fi
 
 while true; do
-    ./build/apache-maven-3.2.5/bin/mvn clean install # use the maven that spigot build tools downloaded
+    if [ -f "build/apache-maven-3.2.5" ]; then
+    	./build/apache-maven-3.2.5/bin/mvn clean install # use the maven that spigot build tools downloaded
+    else
+        mvn clean install
+    fi
     cp target/DevathonProject-1.0-SNAPSHOT.jar server/plugins/DevathonProject-1.0-SNAPSHOT.jar
     cd server
 
