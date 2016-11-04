@@ -28,6 +28,10 @@ Finish by November 6th at 8AM Central Time. You can find this time in your local
 
 ## Get Started
 
+**If you already know how to use Maven, then more than likely the following steps are irrelevant for you. Just do your usual thing.**
+
+---
+
 Don't worry, we made a video! Check it out at https://www.youtube.com/watch?v=u5HXS0l-VwQ
 
 ---
