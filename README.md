@@ -31,6 +31,7 @@ Finish by November 6th at 8AM Central Time. You can find this time in your local
 ### Don't understand the following steps?
 
 Don't worry, we made a video! Check it out at https://www.youtube.com/watch?v=u5HXS0l-VwQ
+
 ---
 
 First things first, you need to have the Java JDK8 installed. You can find the appropriate version here: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
