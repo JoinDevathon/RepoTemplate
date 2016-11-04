@@ -2,7 +2,20 @@
 
 if [ ! -d "server" ] || [ ! -d "build" ]; then
     echo "Spigot is not downloaded, downloading and building now.."
-    bash download-spigot.sh
+    rm -rf build/
+    mkdir build
+    cd build
+
+    curl -O https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+    java -jar BuildTools.jar --rev 1.10
+
+    if [ ! -d "apache-maven-3.2.5" ]; then
+        curl -o apache-maven-3.2.5.zip http://mirror.metrocast.net/apache//maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip
+        unzip apache-maven-3.2.5.zip
+        rm apache-maven-3.2.5.zip
+    fi
+
+    cd ..
     chmod +x ./build/apache-maven-3.2.5/bin/mvn # for some reason this isn't executable by default..
     mkdir -p server/plugins
 fi
