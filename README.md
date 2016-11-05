@@ -1,6 +1,13 @@
 # Devathon Project
 This is the base layout for your Devathon Project. It includes several scripts to make running incredibly easy on Windows, Mac, and Linux.
 
+## Help
+
+Help will be available for 25 hours during the contest at the following sources:
+
+Twitter: https://twitter.com/JoinDevathon
+Discord: https://discordapp.com/invite/qNxMS5B
+
 ## Theme
 
 The theme for the 2016 Devathon Contest is: **Machines!**
