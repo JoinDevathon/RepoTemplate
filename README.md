@@ -31,6 +31,7 @@ Finish by November 6th at 8AM Central Time. You can find this time in your local
 9.  Code must be able to compile, we will not fix compile errors.
 10. You must use Java 8.
 11. Your plugin must fit the theme or it will be disqualified.
+12. Maven is required.
 
 
 ## Get Started
